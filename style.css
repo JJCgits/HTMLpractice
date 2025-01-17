@@ -1,9 +1,59 @@
+/*Mist Blue
+#B0e0e6
+#add8e6
+#87cefa
+#87ceeb
+#4682b4
+*/
+
+
+.body {
+    background-color:deepskyblue;
+    color: lightskyblue;
+
+}
 .small {
-    background-color: red;
-    color: white;
+    background-color: #B0e0e6;
+    color: #87ceeb;
 }
 
 .big {
-    background-color: yellow;
+    background-color:lavender;
     color: blue;
+}
+
+.task {
+    background-color:aliceblue;
+    text-align: center;
+    border-color: black;
+
+   
+}
+
+ul{
+    list-style-type: none;
+    margin-top:10px;
+    padding-left: 10px;
+    border: 10px solid black;
+    }
+    
+li:not(:last-child){
+        
+      border: 5px solid lightblue;
+      margin-top:20px;
+    padding-left: 10px;
+    }
+
+#clear {
+    position:absolute;
+    right: 25px;
+}
+
+#newtask {
+    position:absolute;
+    left: 25px;
+}
+
+#title{
+    color:aqua;
 }

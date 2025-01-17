@@ -2,43 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>To Do List</title>
+  <title>TO-DO List</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
-  <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="style.css">
    <script src="script.js"></script>
 </head>
-<body>
+<body class="body" onload="showAlert()">
 
-  <center><h1>TODO List</h1></center>
+  <center><h1 id="title">TODO List</h1></center>
   <center><h3>V1</h3></center>
 
   <br>
 
-<Ul>
-    <li>
+<Ol>
+    <li class="task">
+        <input type="checkbox" class="check" onclick="completeTask()">
         Build the robot
     
-        <button class="small"> Complete</button>
-        <button class="small" >Edit Task </button>
+         
+        <button class="small" onclick="editTask()">Edit Task </button>
+       
     </li>
-    <li>
+    <li class="task">
+        <input type="checkbox" class="check" onclick="completeTask()">
         Program the Robot
-        <button class="small"> Complete</button>
-        <button class="small">Edit Task</button>
+         
+        <button class="small" onclick="editTask()">Edit Task</button>
     </li>
-    <li>
+    <li class="task">
+        <input type="checkbox" class="check" onclick="completeTask()">
         Buy milk
-        <button class="small"> Complete</button>
-        <button class="small">Edit Task</button>
+         
+        <button class="small" onclick="editTask()">Edit Task</button>
+    </li>
+    <li class="task">
+        <input type="checkbox" class="check" onclick="completeTask()">
+        Buy Protein Powder
+         
+        <button class="small" onclick="editTask()">Edit Task</button>
+    </li>
+    <li class="task">
+        <input type="checkbox" class="check" onclick="completeTask()">
+        Buy Monster
+         
+        <button class="small" onclick="editTask()">Edit Task</button>
+    </li>
+    <li class="task">
+        <input type="checkbox" class="check" onclick="completeTask()">
+        Get a Girlfriend
+         
+        <button class="small" onclick="editTask()">Edit Task</button>
     </li>
 </Ul>
-    <br>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
     <hr>
 
-    <button class="big">  Add New Task</button>
-    <button class="big"> Clear All Tasks</button>
+    <button class="big" id="newtask" onclick="addTask()">  Add New Task</button>
+    <button class="big" id="clear" onclick="clearTask()"> Clear All Tasks</button>
 
 </body>
 </html>
