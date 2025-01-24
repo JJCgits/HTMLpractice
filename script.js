@@ -1,5 +1,6 @@
 var counter = 0;
 var girlfriendCounter
+var hideTaskVar = false;
 function showAlert(){
     var myText = "Welcome to TO-DO List by Joshua Chiyezhan, stop being lazy and get to those tasks bum!\n";
     alert(myText);
@@ -8,10 +9,11 @@ function showAlert(){
 function addTask(){
     var taskName = prompt("What task do you want to add to the list?\n");
     console.log(taskName);
-    var task = document.createElement("li");
+    var task = document.createElement("h1");
     var text = document.createTextNode(taskName);
-    task.appendChild(text)
-    ul.appendChild(task);
+    task.appendChild(text);
+    const body = document.getElementsByClassName("body").
+    document.body.insetBefore(body, task);
 }
 
 function editTask(){
@@ -44,25 +46,29 @@ function hiddenQuest(){
     if(girlfriendCounter == 1){
         alert("lying is a sin you know\n");
     }
-    elif(girlfriendCounter == 2){
+    if(girlfriendCounter == 2){
         alert("Stop the cap");
     }
-    elif(girlfriendCounter == 3){
+    if(girlfriendCounter == 3){
         alert("You're on this app for a reason bum");
     }
-    elif(girlfriendCounter == 4){
+    if(girlfriendCounter == 4){
         alert("Didn't she leave you for Marco??");
     }
-    elif(girlfriendCounter == 5){
+    if(girlfriendCounter == 5){
         alert("Man theres no way");
     }
-    elif(girlfriendCounter == 6){
+    if(girlfriendCounter == 6){
         alert("FOR REAL??");
     }
-    elif(girlfriendCounter == 7){
+    if(girlfriendCounter == 7){
         alert("Im proud of you, press it one more time");
     }
-    elif(girlfriendCounter == 8){
+    if(girlfriendCounter == 8){
         alert("YOU WIN TODO LIST\n");
     }
+}
+
+function hideTask(){
+    hideTaskVar=true;
 }
