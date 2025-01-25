@@ -1,5 +1,5 @@
 var counter = 0;
-var girlfriendCounter
+var girlfriendCounter = 69
 var hideTaskVar = false;
 function showAlert(){
     var myText = "Welcome to TO-DO List by Joshua Chiyezhan, stop being lazy and get to those tasks bum!\n";
@@ -9,11 +9,10 @@ function showAlert(){
 function addTask(){
     var taskName = prompt("What task do you want to add to the list?\n");
     console.log(taskName);
-    var task = document.createElement("h1");
-    var text = document.createTextNode(taskName);
-    task.appendChild(text);
-    const body = document.getElementsByClassName("body").
-    document.body.insetBefore(body, task);
+    var task = document.createElement("p");
+    task.id = "newTask";
+    //var text = document.createTextNode(taskName);
+    document.getElementById("newTask").innerHTML = taskName;
 }
 
 function editTask(){
