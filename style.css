@@ -15,17 +15,22 @@
 .small {
     background-color: #B0e0e6;
     color: #87ceeb;
+  
 }
 
 .big {
     background-color:lavender;
     color: blue;
+
 }
 
 .task {
     background-color:aliceblue;
     text-align: center;
     border-color: black;
+    border: 5px solid lightblue;
+    margin-top:20px;
+    padding-left: 10px;
 
    
 }

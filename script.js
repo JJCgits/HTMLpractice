@@ -1,5 +1,6 @@
 var counter = 0;
 var girlfriendCounter = 69
+var taskCounter = 6;
 var hideTaskVar = false;
 function showAlert(){
     var myText = "Welcome to TO-DO List by Joshua Chiyezhan, stop being lazy and get to those tasks bum!\n";
@@ -7,15 +8,27 @@ function showAlert(){
 }
 
 function addTask(){
+    taskCounter += 1;
     var taskName = prompt("What task do you want to add to the list?\n");
     console.log(taskName);
-    var task = document.createElement("p");
-    task.id = "newTask";
+    const task = document.createElement("li");
+    task.id = taskCounter;
+    // task.setAttribute('class', 'task');
+    task.className = 'task';
+    task.innerHTML = '<input id="' + taskCounter + 'C' + '" type="checkbox" class="check" onclick="completeTask(this)">'
+    + " " + taskName + " " + '<button id="' 
+    + taskCounter +'E" class="small" onclick="editTask(this)">Edit Task </button>';
+    const list = document.getElementById("list");
+    console.log(list);
+    list.appendChild(task);
+    console.log(task);
     //var text = document.createTextNode(taskName);
-    document.getElementById("newTask").innerHTML = taskName;
+    
+
 }
 
-function editTask(){
+function editTask(editButton){
+    console.log(editButton);
     var taskNumber = prompt("What task number do you want to edit?\n");
     var taskName = prompt("What do you want to change this task to?\n");
     console.log(taskName);
@@ -31,7 +44,15 @@ function clearTask(){
 
 }
 
-function completeTask(){
+function completeTask(completeButton){
+    console.log(completeButton.id);
+    completeID = (completeButton.id).replace('C', "");
+   completedTask = document.getElementById(completeID);
+   completedTaskText = (completedTask.textContent);
+   console.log(completedTaskText);
+   console.log(completeID);
+   taskCounter-=1;
+   completedTask.remove();
     counter += 1;
     console.log(counter);
     if (counter == 5){

@@ -9,63 +9,59 @@
    <script src="script.js"></script>
 </head>
 <body class="body" onload="showAlert()">
-
+    <button class="big" id="newtask" onclick="addTask()">  Add New Task</button>
+    <center><button class="big" id="hide-completed" onclick="hideTask()"> Hide Completed Tasks </button></center>
+    <button class="big" id="clear" onclick="clearTask()"> Clear All Tasks</button>
   <center><h1 id="title">TODO List</h1></center>
   <center><h3>V1</h3></center>
 
   <br>
 
-<Ol>
-    <li class="task">
-        <input type="checkbox" class="check" onclick="completeTask()">
+<Ol id="list">
+    <li id="1" class="task">
+        <input id="1C" type="checkbox" class="check" onclick="completeTask(this)">
         Build the robot
     
          
-        <button class="small" onclick="editTask()">Edit Task </button>
+        <button id="1E" class="small" onclick="editTask(this)">Edit Task </button>
        
     </li>
-    <li class="task">
-        <input type="checkbox" class="check" onclick="completeTask()">
+    <li id="2" class="task">
+        <input id="2C" type="checkbox" class="check" onclick="completeTask(this)">
         Program the Robot
          
-        <button class="small" onclick="editTask()">Edit Task</button>
+        <button id="2E" class="small" onclick="editTask(this)">Edit Task</button>
     </li>
-    <li class="task">
-        <input type="checkbox" class="check" onclick="completeTask()">
+    <li id="3" class="task">
+        <input id="3C" type="checkbox" class="check" onclick="completeTask(this)">
         Buy milk
          
-        <button class="small" onclick="editTask()">Edit Task</button>
+        <button id="3E" class="small" onclick="editTask(this)">Edit Task</button>
     </li>
-    <li class="task">
-        <input type="checkbox" class="check" onclick="completeTask()">
+    <li id="4" class="task">
+        <input id="4C" type="checkbox" class="check" onclick="completeTask(this)">
         Buy Protein Powder
          
-        <button class="small" onclick="editTask()">Edit Task</button>
+        <button id="4E" class="small" onclick="editTask(this)">Edit Task</button>
     </li>
-    <li class="task">
-        <input type="checkbox" class="check" onclick="completeTask()">
+    <li id="5" class="task">
+        <input id="5C" type="checkbox" class="check" onclick="completeTask(this)">
         Buy Monster
          
-        <button class="small" onclick="editTask()">Edit Task</button>
+        <button id="5E" class="small" onclick="editTask(this)">Edit Task</button>
     </li>
-    <li class="task">
-        <input type="checkbox" class="check" onclick="completeTask()">
+    <li id="6" class="task">
+        <input id="6C" type="checkbox" class="check" onclick="completeTask(this)">
         Get a Girlfriend
          
-        <button class="small" onclick="editTask()">Edit Task</button>
+        <button id="6E" class="small" onclick="editTask(this)">Edit Task</button>
     </li>
 </Ul>
     
-<br>
-<br>
-<br>
-<br>
-<br>
-    <hr>
 
-    <button class="big" id="newtask" onclick="addTask()">  Add New Task</button>
-    <center><button class="big" id="hide-completed" onclick="hideTask()"> Hide Completed Tasks </button></center>
-    <button class="big" id="clear" onclick="clearTask()"> Clear All Tasks</button>
+
+
+    
 
 </body>
 </html>
