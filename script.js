@@ -28,11 +28,16 @@ function addTask(){
 }
 
 function editTask(editButton){
-    console.log(editButton);
-    var taskNumber = prompt("What task number do you want to edit?\n");
-    var taskName = prompt("What do you want to change this task to?\n");
-    console.log(taskName);
+    console.log(editButton.id);
+    var taskNumber = prompt("What priority do you want to set this to?\n");
+    
+    priorityID = (editButton.id).replace('E', "");
     console.log(taskNumber);
+    console.log(priorityID);
+    priorityTask = document.getElementByID(priorityID);
+    
+    console.log(priorityTask);
+    
 
 }
 
@@ -51,7 +56,7 @@ function completeTask(completeButton){
    completedTaskText = (completedTask.textContent);
    console.log(completedTaskText);
    console.log(completeID);
-   taskCounter-=1;
+   
    completedTask.remove();
     counter += 1;
     console.log(counter);
